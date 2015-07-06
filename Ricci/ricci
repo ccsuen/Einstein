@@ -1,0 +1,112 @@
+syms x a0 a1 a2 a3 a4
+a = [a0 a1 a2 a3 a4];
+z1 = sum (a.*(x).^[0:4])
+ 
+z1 =
+ 
+a4*x^4 + a3*x^3 + a2*x^2 + a1*x + a0
+ 
+z2 = diff(z1)
+ 
+z2 =
+ 
+4*a4*x^3 + 3*a3*x^2 + 2*a2*x + a1
+ 
+syms x b0 b1 b2 b3 b4
+b = [b0 b1 b2 b3 b4];
+z3 = sum (b.*(x).^[0:4])
+ 
+z3 =
+ 
+b4*x^4 + b3*x^3 + b2*x^2 + b1*x + b0
+ 
+z4 = diff(z3)
+ 
+z4 =
+ 
+4*b4*x^3 + 3*b3*x^2 + 2*b2*x + b1
+ 
+syms x c0 c1 c2 c3 c4
+z5 = sum (c.*(x).^[0:4])
+ 
+z5 =
+ 
+- x^4 - x^3 - x^2 - x - 1
+ 
+c = [c0 c1 c2 c3 c4];
+z5 = sum (c.*(x).^[0:4])
+ 
+z5 =
+ 
+c4*x^4 + c3*x^3 + c2*x^2 + c1*x + c0
+ 
+z6 = diff(z5)
+ 
+z6 =
+ 
+4*c4*x^3 + 3*c3*x^2 + 2*c2*x + c1
+ 
+d1 = 2
+
+d1 =
+
+     2
+
+m = 1
+
+m =
+
+     1
+
+d2 = 4*m
+
+d2 =
+
+     4
+
+A2 = 2*m*(m+2);
+A3 = -m/2
+
+A3 =
+
+   -0.5000
+
+e = 0
+
+e =
+
+     0
+
+c = -1
+
+c =
+
+    -1
+
+a = 1
+
+a =
+
+     1
+
+E1 = diff(z2)
+ 
+E1 =
+ 
+12*a4*x^2 + 6*a3*x + 2*a2
+ 
+E2 = diff(z4)
+ 
+E2 =
+ 
+12*b4*x^2 + 6*b3*x + 2*b2
+ 
+E3 = diff(z6)
+ 
+E3 =
+ 
+12*c4*x^2 + 6*c3*x + 2*c2
+ 
+diary ricci
+save ricci
+exit
