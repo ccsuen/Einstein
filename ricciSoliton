@@ -1,0 +1,115 @@
+d1 = 2
+
+d1 =
+
+     2
+
+m = 1
+
+m =
+
+     1
+
+d2 = 4*m
+
+d2 =
+
+     4
+
+A2 = 2*m*(m+2)
+
+A2 =
+
+     6
+
+A3 = m/3
+
+A3 =
+
+    0.3333
+
+A3 = m/2
+
+A3 =
+
+    0.5000
+
+e = 0
+
+e =
+
+     0
+
+c = -1
+
+c =
+
+    -1
+
+a
+{Undefined function or variable 'a'.
+} 
+a = 1
+
+a =
+
+     1
+
+syms z1(t) z2(t) z3(t) z4(t) z5(t) z6(t)
+[z1(t), z2(t), z3(t), z4(t), z5(t), z6(t)] = dsolve(diff(z1) == z2,...
+diff(z2)*z1*z3^4*d1 == -(d1-1)*(z2)^2*(z3)^4*d1-d2*z2*z4*(z3)^3*z1*d1+z2*z6*z1*d1*(z3)^4+(d1-1)*(z3)^4*d1+A3*(z1)^4+(e/2)*(z1)^2*(z3)^4*d1,...
+diff(z3) == z4,...
+diff(z4)*z1*z3^3*d2 == -d1*z2*z4*(z3)^3*d2-(d2-1)*(z4)^2*(z3)^2*d2*z1+z4*z6*z1*(z3)^3*d2+A2*(z3)^2*z1-2*A3*(z1)^3+(e/2)*d2*(z3)^4*z1,...
+diff(z5) == z6,...
+diff(z6)*z1*z3 == -(z6)*(d1*z2*z3+d2*z4*z1)+(z6)^2+c+e*z5,...
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+diff(diff(z6)) == -1/3,...
+z2(0) == 1,...
+z3(0) == a)
+[Warning: The number of equations exceeds the number of indeterminates. Trying
+heuristics to reduce to square system.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/symengine.p', 57)" style="font-weight:bold">symengine</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/symengine.p',57,0)">line 57</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mupadengine/evalin', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/@mupadengine/mupadengine.m', 102)" style="font-weight:bold">mupadengine/evalin</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/@mupadengine/mupadengine.m',102,0)">line 102</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mupadengine/feval', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/@mupadengine/mupadengine.m', 158)" style="font-weight:bold">mupadengine/feval</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/@mupadengine/mupadengine.m',158,0)">line 158</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsolve>mupadDsolve', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m', 332)" style="font-weight:bold">dsolve>mupadDsolve</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m',332,0)">line 332</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsolve', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m', 193)" style="font-weight:bold">dsolve</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m',193,0)">line 193</a>)] 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mupadengine/feval', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/@mupadengine/mupadengine.m', 163)" style="font-weight:bold">mupadengine/feval</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/@mupadengine/mupadengine.m',163,0)">line 163</a>)
+Cannot reduce to the square system because the number of equations differs from the
+number of indeterminates.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsolve>mupadDsolve', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m', 332)" style="font-weight:bold">dsolve>mupadDsolve</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m',332,0)">line 332</a>)
+T = feval(symengine,'symobj::dsolve',sys,x,options);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsolve', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m', 193)" style="font-weight:bold">dsolve</a> (<a href="matlab: opentoline('/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/dsolve.m',193,0)">line 193</a>)
+sol = mupadDsolve(args, options);
+} 
+matlab.internal.language.introspective.errorDocCallback('symengine', '/usr/local.clients/generic/x86_64/matlab/r2015a/toolbox/symbolic/symbolic/symengine.p', 57)
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+diary ricciSoliton
+save ricciSoliton
+sloc 163
+{Undefined function or variable 'sloc'.
+} 
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+exit
